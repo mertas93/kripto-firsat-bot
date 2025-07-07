@@ -2,7 +2,7 @@ name: Kripto Fırsat Bot
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # her 5 dakikada bir çalıştırır
+    - cron: '*/30 * * * *'  # her 30 dakikada bir çalıştırır
   workflow_dispatch:
 
 jobs:
