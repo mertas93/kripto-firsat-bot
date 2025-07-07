@@ -21,7 +21,7 @@ page = 1
 max_pages = 1  # yalnızca ilk 250 coin
 fırsatlar = []
 
-while True:
+while page <= max_pages:
     url = f"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=volume_desc&per_page=250&page={page}&price_change_percentage=1h"
     response = requests.get(url)
     try:
@@ -58,9 +58,6 @@ while True:
     page += 1
     time.sleep(1)
 
-    if page > max_pages:
-        break
-
 if fırsatlar:
     print(f"Bildirim gönderiliyor. {len(fırsatlar)} fırsat bulundu.")
     mesaj = "📈 Ciddi Fırsat Coinler (MACD yukarı, hacim güçlü):\n\n"
@@ -71,4 +68,4 @@ if fırsatlar:
     except Exception as e:
         print(f"Telegram gönderim hatası: {e}")
 
-print(f"İlk 250 coin tarandı. Toplam: {total_count} coin. Fırsat: {fırsat_count} coin.")
+print(f"✅ Bot çalışmasını tamamladı. Toplam: {total_count} coin. Fırsat: {fırsat_count} coin.")
