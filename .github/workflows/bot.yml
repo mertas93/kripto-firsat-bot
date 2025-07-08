@@ -2,8 +2,8 @@ name: Kripto Fırsat Bot
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # her 30 dakikada bir çalıştırır
-  workflow_dispatch:
+    - cron: "*/30 * * * *"  # her 30 dakikada bir
+  workflow_dispatch:        # elle başlatmak için
 
 jobs:
   build:
@@ -19,8 +19,7 @@ jobs:
         python-version: '3.10'
 
     - name: Bağımlılıkları yükle
-      run: |
-        pip install python-telegram-bot requests
+      run: pip install -r requirements.txt || true
 
     - name: Botu çalıştır
-      run: python3 kriptofırsat.py
+      run: python kriptofırsat.py
