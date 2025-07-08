@@ -3,7 +3,7 @@ name: Kripto Fırsat Bot
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/1 * * * *"  # Her 30 dakikada bir çalışır
+    - cron: "*/1 * * * *"  # Test için her 30 dakikada bir çalışır
 
 jobs:
   build:
@@ -24,4 +24,4 @@ jobs:
 
       - name: Botu çalıştır
         run: |
-          python kriptofirsat.py
+          python kriptofırsat.py
