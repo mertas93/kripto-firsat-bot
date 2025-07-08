@@ -1,7 +1,9 @@
+from telegram import Bot
 import requests
 import time
-from telegram import Bot, request
 import random
+
+bot = Bot(token=bot_token)
 
 # Telegram bot ayarları
 bot_token = "8036527191:AAEGeUZHDb4AMLICFGmGl6OdrN4hrSaUpoQ"
