@@ -69,3 +69,5 @@ if fırsatlar:
         print(f"Telegram gönderim hatası: {e}")
 
 print(f"✅ Bot çalışmasını tamamladı. Toplam: {total_count} coin. Fırsat: {fırsat_count} coin.")
+
+print(bot.get_me())
