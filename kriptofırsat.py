@@ -1,17 +1,13 @@
-from telegram import Bot
 import requests
 import time
+from telegram import Bot
 import random
-
-bot = Bot(token=bot_token)
 
 # Telegram bot ayarları
 bot_token = "8036527191:AAEGeUZHDb4AMLICFGmGl6OdrN4hrSaUpoQ"
 chat_id = "1119272011"
 
-# Timeout’lu request ile bot oluştur
-req = request.Request(connect_timeout=10, read_timeout=10)
-bot = Bot(token=bot_token, request=req)
+bot = Bot(token=bot_token)
 
 def rsi_dummy(price_list):
     return random.randint(20, 80)  # rastgele RSI
