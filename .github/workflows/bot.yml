@@ -22,10 +22,6 @@ jobs:
         run: |
           pip install requests python-telegram-bot
 
-      - name: Çalışma dizinini kontrol et
-        run: |
-          ls -la
-
       - name: Botu çalıştır
         run: |
-          python ./kriptofirsat.py
+          python kriptofirsat.py
