@@ -71,7 +71,7 @@ else:
     mesaj = "🚨 Bu turda ciddi bir fırsat bulunamadı."
 
 try:
-    bot.send_message(chat_id=chat_id, text=mesaj, disable_notification=True, timeout=10)
+    bot.send_message(chat_id=chat_id, text=mesaj, disable_notification=True)
     print("Bildirim gönderildi.")
 except Exception as e:
     print(f"Telegram gönderim hatası: {e}")
